@@ -70,8 +70,8 @@ def mapping_triangle(xi, eta, vertices):
     if (len(xi) != len(eta)):
         raise Exception("The input coordinates must have the same number of coordinates.")
 
-    x = (np.ones(len(xi))-xi-eta)*vertices[0,0]+xi*vertices[1,0]+eta*vertices[2,0] # TODO
-    y = (np.ones(len(xi))-xi-eta)*vertices[0,1]+xi*vertices[1,1]+eta*vertices[2,1]# TODO
+    x = (numpy.ones(len(xi))-xi-eta)*vertices[0,0]+xi*vertices[1,0]+eta*vertices[2,0] # TODO
+    y = (numpy.ones(len(xi))-xi-eta)*vertices[0,1]+xi*vertices[1,1]+eta*vertices[2,1]# TODO
 
     return x, y
     
