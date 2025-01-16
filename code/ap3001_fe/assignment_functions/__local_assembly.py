@@ -27,7 +27,7 @@ def generate_element_mass_matrix(basis, element_idx, sigma):
 
     for i_basis_idx in numpy.arange(0, 3):
         for j_basis_idx in numpy.arange(0, 3):
-            M_local[i_basis_idx, j_basis_idx] =  # TODO
+            M_local[i_basis_idx, j_basis_idx] = numpy.sum(w_quad*Bc_basis_eval[i_basis_idx]*Bc_basis_eval[j_basis_idx]*det_J) # TODO
 
     return M_local
 
