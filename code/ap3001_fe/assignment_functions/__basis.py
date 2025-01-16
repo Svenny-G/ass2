@@ -79,15 +79,15 @@ def basis_canonical_triangle(xi, eta):
 
     # Basis associated to node 2 (xi, eta) = (1.0, 0.0)
     alpha_2 = 0 # TODO
-    beta_2 = 0 # TODO
-    gamma_2 = 1 # TODO
+    beta_2 = 1 # TODO
+    gamma_2 = 0 # TODO
 
     B_c_eval[1, :] = alpha_2 + beta_2 * xi + gamma_2 * eta 
 
     # Basis associated to node 3 (xi, eta) = (0.0, 1.0)
     alpha_3 = 0 # TODO
-    beta_3 = 1 # TODO
-    gamma_3 = 0 # TODO
+    beta_3 = 0 # TODO
+    gamma_3 = 1 # TODO
 
     B_c_eval[2, :] = alpha_3 + beta_3 * xi + gamma_3 * eta 
 
@@ -190,18 +190,18 @@ def grad_basis_canonical_triangle(xi, eta):
 
     # Basis associated to node 2 (xi, eta) = (1.0, 0.0)
     alpha_2 = 0 # TODO
-    beta_2 = 0 # TODO
-    gamma_2 = 1 # TODO
+    beta_2 = 1 # TODO
+    gamma_2 = 0 # TODO
 
-    grad_B_c_eval[1, :, 0] = 0 # TODO 
-    grad_B_c_eval[1, :, 1] = 1 # TODO 
+    grad_B_c_eval[1, :, 0] = 1 # TODO 
+    grad_B_c_eval[1, :, 1] = 0 # TODO 
 
     # Basis associated to node 3 (xi, eta) = (0.0, 1.0)
     alpha_3 = 0 # TODO
-    beta_3 = 1 # TODO
-    gamma_3 = 0 # TODO
+    beta_3 = 0 # TODO
+    gamma_3 = 1 # TODO
 
-    grad_B_c_eval[2, :, 0] = 1 # TODO 
-    grad_B_c_eval[2, :, 1] = 0 # TODO 
+    grad_B_c_eval[2, :, 0] = 0 # TODO 
+    grad_B_c_eval[2, :, 1] = 1 # TODO 
 
     return grad_B_c_eval
