@@ -70,8 +70,8 @@ def mapping_triangle(xi, eta, vertices):
     if (len(xi) != len(eta)):
         raise Exception("The input coordinates must have the same number of coordinates.")
 
-    x = # TODO
-    y = # TODO
+    x = (np.ones(len(xi))-xi-eta)*vertices[0,0]+xi*vertices[1,0]+eta*vertices[2,0] # TODO
+    y = (np.ones(len(xi))-xi-eta)*vertices[0,1]+xi*vertices[1,1]+eta*vertices[2,1]# TODO
 
     return x, y
     
@@ -176,10 +176,10 @@ def jacobian_triangle(xi, eta, vertices):
     J = numpy.zeros([n_eval_points, physical_manifold_dimension, canonical_manifold_dimension])
 
     # Compute each term of the Jacobian (note that it is the same for all points)
-    dPhi_x_d_xi =   # TODO
-    dPhi_x_d_eta =  # TODO
-    dPhi_y_d_xi =   # TODO
-    dPhi_y_d_eta =  # TODO
+    dPhi_x_d_xi =  -1*vertices[0,0]+vertices[1,0] # TODO
+    dPhi_x_d_eta = -1*vertices[0,0]+vertices[2,0] # TODO
+    dPhi_y_d_xi =  -1*vertices[0,1]+vertices[1,1] # TODO
+    dPhi_y_d_eta = -1*vertices[0,1]+vertices[2,1] # TODO
 
     # Then place it in the Jacobian matrix
     # We could have made this into a 2D matrix instead of repeating the same for all points
