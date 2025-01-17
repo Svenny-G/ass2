@@ -104,7 +104,7 @@ def generate_element_vector(basis, element_idx, f):
     F_local = numpy.zeros(n_canonical_basis)  # pre-allocate memory for the local vector
 
     for j_basis_idx in numpy.arange(0, 3):
-        F_local[j_basis_idx] = numpy.sum(w_quad*f[x_quad,y_quad]*Bc_basis_eval[j_basis_idx]*det_J) # TODO
+        F_local[j_basis_idx] = numpy.sum(w_quad*f(x_quad,y_quad)*Bc_basis_eval[j_basis_idx]*det_J) # TODO
 
     return F_local
 
