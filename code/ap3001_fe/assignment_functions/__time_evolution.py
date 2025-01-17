@@ -77,7 +77,7 @@ def evolve_in_time(u_0, f, M, N, delta_t, theta, basis, tol=1e-10, t_step_max = 
     #
     # Note 2: ignore the essential boundary conditions for now, these will be set below,
     #         i.e., consider the system without the essential boundary conditions at this stage.
-    A = 1/delta t*(M+delta_t*theta*N) # TODO
+    A = 1/delta_t*(M+delta_t*theta*N) # TODO
     B = 1/delta_t*(M-delta_t*(1-theta)*N) # TODO
 
     # Impose boundary conditions in A
